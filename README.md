@@ -22,9 +22,9 @@ helpers contained in
 Compatibility
 ------------------------------------------------------------------------------
 
-- Ember.js v3.4 or above
-- Ember CLI v2.13 or above
-- Node.js 8 or above
+- Ember.js v3.16 or above
+- Ember CLI v3.16 or above
+- Node.js 10 or above
 
 
 Installation
@@ -64,6 +64,9 @@ import Application from '../app';
 import config from '../config/environment';
 import { setApplication } from '@ember/test-helpers';
 import { start } from 'ember-mocha';
+import chai from 'chai';
+import chaiDom from 'chai-dom';
+chai.use(chaiDom)
 
 setApplication(Application.create(config.APP));
 start();
@@ -115,6 +118,14 @@ This will make sure that in functions passed to `hooks.afterEach()` the
 Mocha itself runs `afterEach` hooks in a different order than QUnit, which is
 why this "workaround" is sometimes needed.
 
+Sometimess you will need to specify that tests should not wait for settled state.
+If you see timeout errors in an `afterEach` hook for your tests update your `setupTest`
+cal:
+
+```javascript
+describe('SidebarController', function() {
+  setupTest({ waitForSettled: false });
+```
 
 ### Setup Rendering Tests
 
@@ -192,7 +203,7 @@ test this library.
 ### Installation
 
 ```sh
-npm install
+yarn
 ```
 
 ### Testing
@@ -200,15 +211,13 @@ npm install
 In order to test in the browser:
 
 ```sh
-npm start
+yarn test --server
 ```
-
-... and then visit [http://localhost:4200/tests](http://localhost:4200/tests).
 
 In order to perform a CI test:
 
 ```sh
-npm test
+yarn test
 ```
 
 
