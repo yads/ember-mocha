@@ -33,7 +33,7 @@
     "ember-cli-test-loader": "^3.0.0"
   },
   "devDependencies": {
-    "@ember/optional-features": "^0.7.0",
+    "@ember/optional-features": "^2.0.0",
     "@ember/test-helpers": "^2.1.4",
     "@glimmer/component": "^1.0.0",
     "@glimmer/tracking": "^1.0.0",
