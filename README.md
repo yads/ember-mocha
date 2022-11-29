@@ -15,6 +15,13 @@ ember-mocha2 simplifies testing of Ember applications with
 helpers contained in
 [@ember/test-helpers](https://github.com/emberjs/ember-test-helpers).
 
+IMPORTANT!!!
+------------------------------------------------------------------------------
+I've found it increasingly more difficult to updgrade this plugin past Ember 3.28.
+For people who are looking to potentially migrate away from ember-mocha, I've
+created a [codemod](https://github.com/yads/ember-mocha-to-qunit-codemod) to help
+with the transition. As such I will not be making updates to this repo and consider
+this package deprecated.
 
 Compatibility
 ------------------------------------------------------------------------------
