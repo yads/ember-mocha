@@ -57,11 +57,11 @@
     "eslint-plugin-node": "^11.0.0",
     "lerna-changelog": "^1.0.0",
     "loader.js": "^4.7.0",
-    "mocha": "^8.0.0"
+    "mocha": "^9.0.3"
   },
   "peerDependencies": {
     "@ember/test-helpers": "^2.1.4",
-    "mocha": "^8.0.0"
+    "mocha": "^9.0.3"
   },
   "engines": {
     "node": "10.* || >= 12"
